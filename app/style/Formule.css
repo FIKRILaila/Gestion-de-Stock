@@ -1,0 +1,197 @@
+* {
+  margin: 0;
+  padding: 0;
+  /* font-style: normal; */
+  /* font-size: 20px;   */
+}
+
+html {
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  background: -webkit-gradient(linear, left top, left bottom, from(#1180a296), to(#fff)) no-repeat;
+  background: linear-gradient(#1180a296, #fff) no-repeat;
+  height: 100%;
+  background-size: cover;
+  width: 100%;
+  font-family: 'Poppins', sans-serif;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 0;
+  /* background-color: rgba(131, 130, 130, 0.26); */
+}
+
+.fa {
+  font-size: 17px;
+}
+
+section {
+  background-color: transparent;
+  -webkit-box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+          box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  margin: auto;
+  padding: 45px;
+  position: relative;
+  /* left: 40px; */
+  /* background-color: white; */
+}
+
+section .title {
+  text-align: center;
+}
+
+section .title h1 {
+  color: #000000;
+  font-size: 35px;
+  line-height: 30px;
+  /* letter-spacing: 2px;
+    font-weight: 500; */
+  margin-top: 30px;
+}
+
+section #inputarea {
+  margin: 20px 0px;
+}
+
+section #inputarea .inputcont {
+  padding: 23px 0px;
+}
+
+/* section #inputarea .inputcont input {
+    width: 100%;
+    font-weight: 300;
+    font-size: 20px;
+    color: #000;
+    border: none;
+    padding: 27px -27px 7px 10px;
+    background-color: #fff0;
+    border: 1px solid #000000;
+    background-color: #fff0;
+    display: block;
+    font-family: inherit;
+    font-size: 14px;
+    padding: 15px;
+    width: 95%;
+} */
+section #inputarea .inputcont input:focus {
+  outline: none;
+}
+
+section .strengtharea {
+  display: none;
+  font-size: 16px;
+  font-weight: 400;
+  color: #575757;
+}
+
+section .matcharea {
+  display: none;
+  font-size: 16px;
+  font-weight: 400;
+  color: #575757;
+}
+
+section .buttonarea {
+  text-align: center;
+  margin-top: 25px;
+}
+
+.button {
+  border: none;
+  margin: auto;
+  padding: 8px;
+  width: 200px;
+  font-weight: 400;
+  font-size: 18px;
+  background: #117FA2;
+  border: 2px solid #117FA2;
+  color: white;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+  height: 50px;
+}
+
+.button:hover {
+  outline: none;
+  cursor: pointer;
+  -webkit-box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
+          box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
+  color: #117FA2;
+  background-color: #ffffff;
+}
+
+.button:focus {
+  outline: none;
+}
+
+.inputcont {
+  padding: 30px 40px;
+}
+
+.inputcont {
+  margin-bottom: 10px;
+  padding-bottom: 20px;
+  position: relative;
+}
+
+.inputcont label {
+  display: inline-block;
+  margin-bottom: 5px;
+}
+
+.inputcont input {
+  border: 1px solid #000000;
+  background-color: #fff0;
+  display: block;
+  font-family: inherit;
+  font-size: 14px;
+  padding: 10px;
+  width: 100%;
+}
+
+.inputcont.success input {
+  border-color: #2ecc71;
+}
+
+.inputcont.error input {
+  border-color: #e74c3c;
+}
+
+.inputcont i {
+  visibility: hidden;
+  position: absolute;
+  top: 60px;
+  right: 0px;
+}
+
+.inputcont.success i.fa-check-circle {
+  color: #2ecc71;
+  visibility: visible;
+}
+
+.inputcont.error i.fa-exclamation-circle {
+  color: #e74c3c;
+  visibility: visible;
+}
+
+.inputcont small {
+  color: #e74c3c;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  visibility: hidden;
+}
+
+.inputcont.error small {
+  visibility: visible;
+}
+/*# sourceMappingURL=Formule.css.map */

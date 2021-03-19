@@ -1,0 +1,15 @@
+$primaryColor: #117FA2;
+$SecondaryColor: white;
+
+@mixin flex($der,$jc,$ai){
+    display: flex;
+    flex-direction:$der;
+    justify-content: $jc;
+    align-items: $ai
+}
+
+*{
+    font-family: 'Poppins', 'sans-serif';
+    margin:0;
+    overflow: hidden;
+}

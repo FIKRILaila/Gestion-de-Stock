@@ -1,0 +1,337 @@
+@import "base";
+
+
+body{
+    overflow: hidden; /* Hide scrollbars */
+    aside {
+        background-color: $primaryColor;
+        @include flex(column, center, center);
+        width: 17%;
+        height: 100vh;
+        position: fixed;
+        color: $SecondaryColor;
+        @media only screen and (max-width: 600px){
+            height: 10%;
+            width: 100%;
+        }
+        .logo{
+            @include flex(column, center, center);
+            position: relative;
+            bottom: 38%;
+            @media only screen and (max-width: 600px){
+                bottom: 2%;
+                right:28%;
+             }
+            img{
+                border-radius: 50%;
+                width: 50%;
+                @media only screen and (max-width: 600px){
+                   display: none;
+                }
+            }
+        }
+        .logout {
+            @include flex(row, space-between, center);
+            position: relative;
+            top: 38%;
+            @media only screen and (max-width: 600px){
+                display: none;
+            }
+          .fa{
+            color: $SecondaryColor;
+            }
+        }
+    }
+    header{
+        @include flex(row, flex-end, center);
+        color: $primaryColor;
+        width: 83%;
+        position: fixed;
+        right: 0;
+        top: 0px;
+        box-shadow: 5px 0 5px #a8a8a8;
+        h3 {
+            padding: 30px 10px;
+        }
+        .fa {
+            padding: 5px 10px;
+            font-size: 40px;
+        }
+        i:nth-child(even){
+            background-color: $SecondaryColor;
+            border: solid #a8a8a8 1px;
+            border-radius: 50%;
+        }
+        @media only screen and (max-width: 600px){
+           display: none;
+        }
+    }
+    .all{
+        margin-left: 19%;
+        margin-top: 125px;
+        margin-right: 2%;
+        font-size: 20px;
+        @media only screen and (max-width: 600px) {
+            margin-left: 2%;
+            margin-top: 150px;
+            margin-right: 2%; 
+        }
+        .bar{
+            display: flex;
+            column-gap: 5px;
+            width: 100%;
+            margin-bottom: 20px;
+            .btn-a{
+                background:$primaryColor;
+                text-align: center;
+                color: $SecondaryColor;
+                cursor: pointer;
+                font-size: 20px;
+                width: 200px;
+                text-decoration: none;
+                padding: 15px;
+                @media only screen and (max-width: 600px) {
+                    font-size: 17px;
+                    width: 100px;
+                    padding: 10px;
+                }
+            }
+            .search{
+                width: 100%;
+                position: relative;
+                display: flex;
+                .searchTerm {
+                    width: 100%;
+                    border: 1px solid gray;
+                    border-right: none;
+                    padding: 5px;
+                    outline: none;
+                    color:gray;
+                }
+                .searchTerm:focus{
+                    color: $primaryColor;
+                }
+                .searchButton{
+                    width: 40px;
+                    height: 36px;
+                    border: 1px solid $primaryColor;
+                    background:$primaryColor;
+                    text-align: center;
+                    color:$SecondaryColor;
+                    cursor: pointer;
+                    font-size: 20px;
+                    width: 200px;
+                }
+                #searchButton{
+                    background-color: $primaryColor;
+                    color:$SecondaryColor;
+                    padding: 0 10px;
+              
+                }
+            }
+        }
+        table{
+            border-collapse: collapse;
+            width: 100%;
+            bottom: 25em;
+            font-size: 20px;
+            .view_info{
+                display: none;
+            }
+            @media only screen and (max-width: 600px) {
+                .th_hide{
+                    display: none;
+                }
+            }
+
+            thead{
+                background-color: #dddddd6e;
+            
+            }
+            td,th{
+                text-align: center;
+                padding: 8px;
+                color: rgb(128, 124, 124);
+                
+            }
+            tr:nth-child(even){
+                background-color: #dddddd6e;
+            }
+            td ul{
+                display: flex;
+                padding: 0;
+                list-style: none;
+                font-size: 30px;
+                gap: 5px;
+                justify-content: center;
+                i {
+                    color: $primaryColor;
+                }
+            }
+        }
+    }
+    .delete{
+        background-color: rgba(black, 0.3);
+        //backdrop-filter: blur(5px);
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 100%;
+        height: 100%;
+        padding-top: 140px;
+        display: none;
+        .contenu{
+            box-shadow: 0px 5px 18px rgba(0, 0, 0, 0.603);
+            background-color: $SecondaryColor;
+            height: 20%;
+            width: 30%;
+            margin: auto;
+            position: absolute;
+            top: 50%;
+            right: 30%;
+            @include flex(column, center, center);
+            @media only screen and (max-width: 600px){
+                height: 20%;
+                width: 80%;
+                top: 35%;
+                right: 10%;
+            }
+            h1{
+                margin-bottom: 45px;
+                @media only screen and (max-width: 600px){
+                    font-size: 25px;
+                }
+
+            }
+            .btn_delete{
+                align-self: flex-end;
+                position: absolute;
+                bottom: 0;
+                margin: 20px;
+            }
+            .button {
+                border: none;
+                text-align: center;
+                text-decoration: none;
+                display: inline-block;
+                font-size: 16px;
+                font-weight: bold;
+                cursor: pointer;
+                
+            }
+            .cancel{
+                background-color: $SecondaryColor;
+                color: $primaryColor;
+                border: 2px solid $primaryColor;
+                padding:10px 15px;
+                @media only screen and (max-width: 600px){
+                    padding:5px 10px;
+                }
+                
+            }
+            .yes{
+                background-color: $primaryColor;
+                color: $SecondaryColor;
+                border: 2px solid $primaryColor;
+                padding:10px 25px;
+                @media only screen and (max-width: 600px){
+                    padding:5px 20px;
+                }
+                
+            }
+        }
+    }
+    .content{
+        background-color: rgba(black, 0.3);
+        //backdrop-filter: blur(5px);
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 100%;
+        height: 100%;
+        padding-top: 140px;
+        display: none;
+        @media only screen and (max-width: 600px){
+            padding-top:90px;
+        }
+        .view{
+            box-shadow: 0px 5px 18px rgba(0, 0, 0, 0.603);
+            background-color: white;
+            height: 90%;
+            width: 90%;
+            margin: auto;
+            @media only screen and (max-width: 600px){
+                height: 90%;
+                width: 90%;
+            }
+            .titre{
+                @include flex(row, center, center);
+                margin-top: 50px;
+                @media only screen and (max-width: 600px){
+                    margin-top: 20px;
+                }
+                h1{
+                    padding-top: 2%;
+                    font-size: 35px;
+                    color: $primaryColor;
+                    @media only screen and (max-width: 600px){
+                        padding-top:1%;
+                        font-size: 25px;
+                    }
+                }
+                i{
+                    font-size: 35px;
+                    position: absolute;
+                    right: 20%;
+                    color: $primaryColor;
+                    @media only screen and (max-width: 600px){
+                        font-size: 25px;
+                        right: 10%;
+                    }
+                }
+            }
+            .container{
+                width: 100%;
+                @include flex(row, center, center);
+                @media only screen and (max-width: 600px){
+                    width: 100%;
+                    @include flex(column, center, center);
+                }
+                .image {
+                    width: 40%;
+                    @media only screen and (max-width: 600px){
+                        width: 100%;
+                        height:40%;
+                    }
+                    img {
+                        width: 100%;
+                    }
+                }
+                .info {
+                    width: 60%;
+                    @media only screen and (max-width: 600px){
+                        width: 80%;
+                    }
+                    p{
+                        span{
+                            color: $primaryColor;
+                        }
+                        
+                        color: gray;
+                        width: 100%;
+                        height: 100%;
+                        font-size: 30px;
+                        font-weight: 600;
+                        @media only screen and (max-width: 600px){
+                            width: 100%;
+                            height: 60%;
+                            font-size: 20px;
+                            font-weight: 600;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
