@@ -45,6 +45,9 @@ body{
                     outline: none;
                     padding-bottom: 5px;
                 }
+                #idmobile{
+                    display: block;
+                }
             }
             
         }
@@ -110,20 +113,20 @@ body{
          
         }
         
-        a{
-            .BACK{
-                background-color:white ;
+        .btns{
+                // padding-top:5px;
+            a{
+                text-decoration: none;
                 color:$primaryColor;
                 border:2px solid $primaryColor;
-                width: 150px;
-            padding: 15px 10px;
+                padding: 10px 30px 13px 30px;
             }
             .SAVE{
+                border: none;
                 background-color: $primaryColor ;
                 color:  white;
                 border:2px solid $primaryColor;
-                width: 150px;
-            padding: 15px 10px;
+                padding: 13px 35px;
             }
 
         }
@@ -133,6 +136,10 @@ body{
 }
 
 @media only screen and (max-width: 600px) {
+    
+    #idmobile{
+        display: none;
+    }
     .edit{
         height: 98%;
         h1{
@@ -140,29 +147,28 @@ body{
            font-size: 25px;
         }
         .input-box{
+            margin: 0;
             width: 90%;
-            height: 90%;
-            margin: 10px 0;
             label{
-                margin-bottom:4px;
+                margin-bottom:5px;
             }
             .input-flex{
                 @include flex(column,space-between,start);
-                width: 90%;
+                
                 .input-group{
-                    padding-bottom: 25px;
+                    padding-bottom: 20px;
                     width: 100%;
                     input{
-                        padding-bottom: 5px;
+                        padding-bottom: 0;
                     }
                 }
                 
             }
             .Description{
                 width: 90%;
-                height: 10%;
+                height: 35%;
                 textarea{
-                    padding:10px;
+                    padding:8px;
                 }
     
             }
@@ -177,19 +183,14 @@ body{
                 margin: 30px 0;
             }
             .btns{
-                .button {
-                    font-size: 20px;
-                    margin: 8px 4px;
-                    height: 53PX;
-                    font-weight:700px;
+                @include flex(column,space-between,center);
+                .SAVE {
+                    padding: 10px 35px;
                 }
                 
                 a{
-                    .BACK,.SAVE{
-                        width: 100px;
-                        padding: 10px 5px;
-                        margin:5px 0;
-                    }  
+                    margin-bottom: 3px;
+                    padding: 8px 13px;
         
                 }
             }

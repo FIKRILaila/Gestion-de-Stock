@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <style>@import url('https://fonts.googleapis.com/css2? family = Poppins: wght @ 500 & display = swap'); </style>
     <title>Document</title>
-    <link rel="stylesheet" href="css/edit.css">
+    <link rel="stylesheet" href="../css/edit.css">
 
 </head>
 <body>
@@ -26,7 +26,7 @@
         <h1>Edit Product</h1>
         <div class="input-box" action="edit.php" methode="post" >
             <div class="input-flex">
-                <div class="input-group">
+                <div class="input-group" id="idmobile">
                     <label>ID</label>
                     <input type="text" placeholder="Prduct ID" id="ID" name="id" value=<?php echo $row[0]; ?>>
                 </div>
@@ -51,17 +51,17 @@
             <div class="input-flex">
                 <div class="input-group">
                     <label>Quantite</label>
-                    <input type="text" placeholder="Prduct Quantite" name="qty"  value=<?php echo $row[0]; ?>>
+                    <input type="text" placeholder="Prduct Quantite" name="qty"  value=<?php echo $row[4]; ?>>
                 </div>
     
                 <div class="input-group">
                     <label>Stock critique</label>
-                    <input type="text" placeholder="Stock critique" name="stock"  value=<?php echo $row[4]; ?>>
+                    <input type="text" placeholder="Stock critique" name="stock"  value=<?php echo $row[7]; ?>>
                 </div>
             </div>
             <div class="Description">
                 <label>Description</label>
-                <textarea cols="50" rows="10" name="desc" placeholder="Description"><?php echo $row[2]; ?></textarea>
+                <textarea cols="40" rows="7" name="desc" placeholder="Description"><?php echo $row[2]; ?></textarea>
             </div>    
             
         </div>
@@ -71,8 +71,8 @@
                 <input id="imgPlcHldr" type="file" onchange=" loadFile(event)" name="img"  placeholder="type here..."   value=<?php echo $row[6]; ?>>
             </div>
             <div class="btns">
-                <a href="dashboard.php"><button class="BACK">BACK</button></a>
-                <a><button class="SAVE" type="submit">SAVE</button></a>
+                <a href="dashboard.php" class="BACK">BACK</a>
+                <button class="SAVE" type="submit">SAVE</button>
             </div>
         </div>
         

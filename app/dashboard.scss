@@ -25,6 +25,7 @@ body{
             img{
                 border-radius: 50%;
                 width: 50%;
+                margin-bottom: 10px;
                 @media only screen and (max-width: 600px){
                    display: none;
                 }
@@ -34,12 +35,17 @@ body{
             @include flex(row, space-between, center);
             position: relative;
             top: 38%;
+            font-size: 20px;
             @media only screen and (max-width: 600px){
                 display: none;
             }
-          .fa{
-            color: $SecondaryColor;
-            }
+           a{
+               text-decoration: none;
+               color: white;
+               margin-left:5px;
+               font-weight: bold;
+        
+           }
         }
     }
     header{
@@ -172,14 +178,17 @@ body{
     }
     .delete{
         background-color: rgba(black, 0.3);
-        //backdrop-filter: blur(5px);
+        backdrop-filter: blur(5px);
         position: absolute;
         left: 50%;
         transform: translate(-50%, -50%);
         width: 100%;
         height: 100%;
-        padding-top: 140px;
+        padding-top: 345px;
         display: none;
+        @media only screen and (max-width: 600px){
+            padding-top: 165px;
+        }
         .contenu{
             box-shadow: 0px 5px 18px rgba(0, 0, 0, 0.603);
             background-color: $SecondaryColor;
@@ -204,12 +213,13 @@ body{
 
             }
             .btn_delete{
+                @include flex(row, space-between, center);
                 align-self: flex-end;
                 position: absolute;
                 bottom: 0;
                 margin: 20px;
             }
-            .button {
+            button {
                 border: none;
                 text-align: center;
                 text-decoration: none;
@@ -217,33 +227,47 @@ body{
                 font-size: 16px;
                 font-weight: bold;
                 cursor: pointer;
+                background-color: $primaryColor;
+                color: $SecondaryColor;
+                // border: 2px solid $primaryColor;
+                padding:10px 25px;
+                @media only screen and (max-width: 600px){
+                    padding:7px 20px;
+                }
                 
             }
-            .cancel{
+            a{
+                text-align: center;
+                text-decoration: none;
+                display: inline-block;
+                font-size: 16px;
+                font-weight: bold;
+                cursor: pointer;
                 background-color: $SecondaryColor;
                 color: $primaryColor;
                 border: 2px solid $primaryColor;
-                padding:10px 15px;
+                padding:7px 15px 9px 15px;
+                margin-right: 4px;
                 @media only screen and (max-width: 600px){
                     padding:5px 10px;
                 }
                 
             }
-            .yes{
-                background-color: $primaryColor;
-                color: $SecondaryColor;
-                border: 2px solid $primaryColor;
-                padding:10px 25px;
-                @media only screen and (max-width: 600px){
-                    padding:5px 20px;
-                }
+            // .yes{
+            //     background-color: $primaryColor;
+            //     color: $SecondaryColor;
+            //     border: 2px solid $primaryColor;
+            //     padding:10px 25px;
+            //     @media only screen and (max-width: 600px){
+            //         padding:5px 20px;
+            //     }
                 
-            }
+            // }
         }
     }
     .content{
         background-color: rgba(black, 0.3);
-        //backdrop-filter: blur(5px);
+        backdrop-filter: blur(5px);
         position: absolute;
         top: 50%;
         left: 50%;
@@ -283,7 +307,7 @@ body{
                 i{
                     font-size: 35px;
                     position: absolute;
-                    right: 20%;
+                    right: 10%;
                     color: $primaryColor;
                     @media only screen and (max-width: 600px){
                         font-size: 25px;
@@ -292,7 +316,8 @@ body{
                 }
             }
             .container{
-                width: 100%;
+                margin-top: 5%;
+                width: 98%;
                 @include flex(row, center, center);
                 @media only screen and (max-width: 600px){
                     width: 100%;
@@ -316,18 +341,14 @@ body{
                     p{
                         span{
                             color: $primaryColor;
+                            font-weight: bold;
                         }
-                        
                         color: gray;
                         width: 100%;
-                        height: 100%;
-                        font-size: 30px;
-                        font-weight: 600;
+                        font-size: 25px;
                         @media only screen and (max-width: 600px){
-                            width: 100%;
                             height: 60%;
                             font-size: 20px;
-                            font-weight: 600;
                         }
                     }
                 }

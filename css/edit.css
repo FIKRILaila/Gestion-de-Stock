@@ -71,6 +71,10 @@ body {
   padding-bottom: 5px;
 }
 
+.edit .input-box .input-flex .input-group #idmobile {
+  display: block;
+}
+
 .edit .input-box .Description {
   width: 90%;
 }
@@ -136,23 +140,25 @@ body {
   height: 53PX;
 }
 
-.edit .imgbtn a .BACK {
-  background-color: white;
+.edit .imgbtn .btns a {
+  text-decoration: none;
   color: #117FA2;
   border: 2px solid #117FA2;
-  width: 150px;
-  padding: 15px 10px;
+  padding: 10px 30px 13px 30px;
 }
 
-.edit .imgbtn a .SAVE {
+.edit .imgbtn .btns .SAVE {
+  border: none;
   background-color: #117FA2;
   color: white;
   border: 2px solid #117FA2;
-  width: 150px;
-  padding: 15px 10px;
+  padding: 13px 35px;
 }
 
 @media only screen and (max-width: 600px) {
+  #idmobile {
+    display: none;
+  }
   .edit {
     height: 98%;
   }
@@ -161,33 +167,31 @@ body {
     font-size: 25px;
   }
   .edit .input-box {
+    margin: 0;
     width: 90%;
-    height: 90%;
-    margin: 10px 0;
   }
   .edit .input-box label {
-    margin-bottom: 4px;
+    margin-bottom: 5px;
   }
   .edit .input-box .input-flex {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: start;
-    width: 90%;
   }
   .edit .input-box .input-flex .input-group {
-    padding-bottom: 25px;
+    padding-bottom: 20px;
     width: 100%;
   }
   .edit .input-box .input-flex .input-group input {
-    padding-bottom: 5px;
+    padding-bottom: 0;
   }
   .edit .input-box .Description {
     width: 90%;
-    height: 10%;
+    height: 35%;
   }
   .edit .input-box .Description textarea {
-    padding: 10px;
+    padding: 8px;
   }
   .edit .imgbtn {
     display: flex;
@@ -201,15 +205,17 @@ body {
     height: 100px;
     margin: 30px 0;
   }
-  .edit .imgbtn .btns .button {
-    font-size: 20px;
-    margin: 8px 4px;
-    height: 53PX;
-    font-weight: 700px;
+  .edit .imgbtn .btns {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
   }
-  .edit .imgbtn .btns a .BACK, .edit .imgbtn .btns a .SAVE {
-    width: 100px;
-    padding: 10px 5px;
-    margin: 5px 0;
+  .edit .imgbtn .btns .SAVE {
+    padding: 10px 35px;
+  }
+  .edit .imgbtn .btns a {
+    margin-bottom: 3px;
+    padding: 8px 13px;
   }
 }

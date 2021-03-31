@@ -10,7 +10,7 @@
         @import url('https://fonts.googleapis.com/css2? family = Poppins: wght @ 500 & display = swap');
     </style>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="css/dashboard.css">
+    <link rel="stylesheet" href="../css/dashboard.css">
     <title>Document</title>
 </head>
 
@@ -30,7 +30,7 @@
 
         <div class="logout">
             <i class="fa fa-sign-out"></i>
-            <li ><a href="../app/login.php"><span>LogOut</span></a></li>
+           <a href="../app/login.php"><span>LogOut</span></a>
 
         </div>
     </aside>
@@ -71,13 +71,13 @@
             ?>
                 <tr>
                     <td><?php echo $row['Nom']; ?></td>
-                    <td class="th_hide"><?php echo $row['Catégorie']; ?></td>
+                    <td class="th_hide"><?php echo $row['Categorie']; ?></td>
                     <td class="th_hide"><?php echo $row['Stock']; ?></td>
                     <td><?php echo $row['Prix']; ?></td>
                     <td class="view_info"><?php echo $row['Id']; ?></td>
                     <td class="view_info"><?php echo $row['Description']; ?></td>
                     <td class="view_info"><?php echo $row['Images']; ?></td>
-                    <td class="view_info"><?php echo $row['stock_crètique']; ?></td>
+                    <td class="view_info"><?php echo $row['stock_critique']; ?></td>
                     <td>
                         <ul>
                             <li><a href="edit.php?id=<?php echo $row['Id'] ?>"><i class="fa fa-edit"></i></a></i></li>
@@ -102,7 +102,7 @@
             </div>
 
             <div class="container">
-                <div class="image"><img src="images/pngegg.png" alt=""></div>
+                <div class="image"><img src="app/images/pngegg.png" alt=""></div>
                 <div class="info">
                     <p>
                         <span>ID :</span><br>
@@ -118,14 +118,13 @@
         </div>
     </section>
 
-
-   
     <form action="delete.php" method="post" class="delete"  id="delete">
         <div class="contenu">
             <h1>ARE YOU SURE ?</h1>
             <input type="text" hidden name="idP" value="">
             <div class="btn_delete">
-                <button class="cancel" onclick="div_hide('delete')">CANCEL</button>
+                <a class="cancel" href="dashboard.php">CANCEL</a>
+                <!-- <button class="cancel" onclick="div_hide('delete')">CANCEL</button> -->
                 <button type="submit" class="yes">YES</button>
             </div>
         </div>
