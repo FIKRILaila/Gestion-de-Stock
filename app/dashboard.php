@@ -21,6 +21,7 @@
         <i class="fa fa-user"></i>
         <i class="fa fa-bell"></i>
     </header>
+    
 
     <aside>
         <div class="logo">
@@ -34,6 +35,27 @@
 
         </div>
     </aside>
+
+
+
+    <div class="menu">
+        <div class="title">
+            <h2>Electro.Safi</h2>
+            <h1>X</h1>
+        </div>
+        <div class="menu_ul">
+            <ul>
+                <li>Profil</li>
+                <li>Notifations</li>
+                <li>Dashboard</li>
+                <li>Log out</li>
+            </ul>
+            
+        </div>
+    </div>
+
+
+
     <div class="all">
         <div class="bar">
 
