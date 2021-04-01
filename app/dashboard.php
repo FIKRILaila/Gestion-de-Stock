@@ -27,6 +27,7 @@
         <div class="logo">
             <img src="images/Electro._Safi.png" alt="#">
             <h2>Electro.Safi</h2>
+            <i class="fa fa-bars" onclick="menu_show('menu')"></i>
         </div>
 
         <div class="logout">
@@ -36,12 +37,10 @@
         </div>
     </aside>
 
-
-
-    <div class="menu">
+    <div class="menu" id="menu">
         <div class="title">
             <h2>Electro.Safi</h2>
-            <h1>X</h1>
+            <i class="fa fa-times-circle" onclick="div_hide('menu')"></i>
         </div>
         <div class="menu_ul">
             <ul>
@@ -124,7 +123,7 @@
             </div>
 
             <div class="container">
-                <div class="image"><img src="app/images/pngegg.png" alt=""></div>
+                <div class="image"><img src="images/pngegg.png" alt=""></div>
                 <div class="info">
                     <p>
                         <span>ID :</span><br>
@@ -161,10 +160,12 @@
             id_delete.value=d;
             document.getElementById(id).style.display = "block";
         }
+        function menu_show(id) {
+            document.getElementById(id).style.display = "block";
+        }
 
         //Function to Hide Popup
         function div_hide(id){
-            console.log(id)
             document.getElementById(id).style.display = "none";
         }
 
@@ -195,8 +196,8 @@
             
                 document.querySelector('.info').innerHTML = html;
                 
-                let img =`<img src="${image}" alt="">`;
-                document.querySelector('.image').innerHTML = img;
+                // let img =`<img src="${image}" alt="">`;
+                // document.querySelector('.image').innerHTML = img;
             });
 
         });

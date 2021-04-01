@@ -40,7 +40,32 @@ body aside .logo {
 @media only screen and (max-width: 600px) {
   body aside .logo {
     bottom: 2%;
-    right: 28%;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+body aside .logo i {
+  display: none;
+}
+
+@media only screen and (max-width: 600px) {
+  body aside .logo i {
+    display: block;
+    margin-right: 10px;
+    font-size: 35px;
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  body aside .logo h2 {
+    margin-left: 10px;
   }
 }
 
@@ -79,6 +104,11 @@ body aside .logout a {
   font-weight: bold;
 }
 
+body aside .logout .fa {
+  font-size: 25px;
+  font-weight: bold;
+}
+
 body .menu {
   position: absolute;
   top: 0;
@@ -88,19 +118,13 @@ body .menu {
   display: none;
 }
 
-@media only screen and (max-width: 600px) {
-  body .menu {
-    display: block;
-  }
-}
-
 body .menu .title {
   background-color: #117FA2;
   color: white;
   width: 100%;
   height: 10%;
   font-size: 17px;
-  padding-top: 15px;
+  padding: 10px 5px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -108,11 +132,12 @@ body .menu .title {
 }
 
 body .menu .title h2 {
-  margin-left: 8px;
+  margin-left: 10px;
 }
 
-body .menu .title h1 {
-  margin-right: 8px;
+body .menu .title i {
+  margin-right: 20px;
+  font-size: 40px;
 }
 
 body .menu .menu_ul {
@@ -128,6 +153,7 @@ body .menu .menu_ul {
 }
 
 body .menu .menu_ul ul {
+  height: 28%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -211,7 +237,6 @@ body .all .bar .btn-a {
 
 body .all .bar .search {
   width: 100%;
-  position: relative;
   display: flex;
 }
 
@@ -277,6 +302,10 @@ body .all table tr:nth-child(even) {
   background-color: #dddddd6e;
 }
 
+body .all table tbody {
+  overflow: auto;
+}
+
 body .all table td ul {
   display: flex;
   padding: 0;
@@ -294,6 +323,7 @@ body .delete {
   background-color: rgba(0, 0, 0, 0.3);
   position: absolute;
   left: 50%;
+  top: 40%;
   transform: translate(-50%, -50%);
   width: 100%;
   height: 100%;
@@ -485,7 +515,7 @@ body .content .view .container {
 }
 
 body .content .view .container .image {
-  width: 40%;
+  width: 50%;
 }
 
 @media only screen and (max-width: 600px) {
@@ -500,7 +530,7 @@ body .content .view .container .image img {
 }
 
 body .content .view .container .info {
-  width: 60%;
+  width: 50%;
 }
 
 @media only screen and (max-width: 600px) {
